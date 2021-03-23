@@ -310,7 +310,7 @@ function update() {
     var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
     names.textContent = mine[i].Building;
-    weeks.textContent = mine[i].Week;
+    weeks.textContent = "Week: "+mine[i].Week;
     srcs.value = mine[i].Image;
     imgs.setAttributeNode(srcs);
     appDiv.appendChild(names);
