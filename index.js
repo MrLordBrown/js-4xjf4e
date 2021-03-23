@@ -305,9 +305,18 @@ function update() {
   var count = Object.keys(mine).length;
   console.log(count);
   for (var i in mine) {
-    appDiv.innerHTML = `<h1>`+mine[i].Building+`</h1><br><h2>`+mine[i].Week+`</h2><br><img src="`+mine[i].Image+`"><br>`;
-    console.log(mine[i].Building);
-  }
+    var names = document.createElement('h1');
+    var weeks = document.createElement('h2');
+    var imgs = document.createElement('img');
+    var srcs = document.createAttribute('src');
+    names.textContent = mine[i].Building;
+    weeks.textContent = mine[i].Week;
+    srcs.value = mine[i].Image;
+    imgs.setAttributeNode(srcs);
+    appDiv.appendChild(names);
+    appDiv.appendChild(weeks);
+    appDiv.appendChild(imgs);
+    console.log(mine[i].Week);
+    }
 }
-
 update();
