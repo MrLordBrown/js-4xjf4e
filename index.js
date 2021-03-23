@@ -78,12 +78,6 @@ var mine = [
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w11.png.png"
   },
   {
-    "Building": "Vacant",
-    "Block": "Vacant",
-    "Week": "",
-    "Image": ""
-  },
-  {
     "Building": "Death Star",
     "Block": "80's Block",
     "Week": "",
@@ -168,12 +162,6 @@ var mine = [
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w22.png.png"
   },
   {
-    "Building": "Vacant",
-    "Block": "Vacant",
-    "Week": "",
-    "Image": ""
-  },
-  {
     "Building": "Natural History Museum South",
     "Block": "Vacant",
     "Week": "",
@@ -190,12 +178,6 @@ var mine = [
     "Block": "City Skylines",
     "Week": 22,
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w22.png.png"
-  },
-  {
-    "Building": "Vacant",
-    "Block": "Vacant",
-    "Week": "",
-    "Image": ""
   },
   {
     "Building": "Namsan Tower, Seoul",
@@ -305,17 +287,22 @@ function update() {
   var count = Object.keys(mine).length;
   console.log(count);
   for (var i in mine) {
+    var container = document.createElement('div');
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
     var imgs = document.createElement('img');
     var srcs = document.createAttribute('src');
+    var idez = document.createAttribute('id');
+    idez.value= mine[i].Building;
+    container.setAttributeNode(idez);
     names.textContent = mine[i].Building;
     weeks.textContent = "Week: "+mine[i].Week;
     srcs.value = mine[i].Image;
     imgs.setAttributeNode(srcs);
-    appDiv.appendChild(names);
-    appDiv.appendChild(weeks);
-    appDiv.appendChild(imgs);
+    container.appendChild(names);
+    container.appendChild(weeks);
+    container.appendChild(imgs);
+    appDiv.appendChild(container);
     console.log(mine[i].Week);
     }
 }
