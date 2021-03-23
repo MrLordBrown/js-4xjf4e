@@ -294,7 +294,7 @@ var mine = [
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w26g.png.png"
   },
   {
-    "Building": "Pagadoa Matthew",
+    "Building": "Pagoda Matthew",
     "Block": "City Skylines",
     "Week": 26,
     "Image": "https://raw.githubusercontent.com/MrLordBrown/bbbcbcphotos/master/w26h.png.png"
