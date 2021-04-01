@@ -1,20 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 h1, h2 {
   font-family: Lato;
-}
-
-img {
-  width: 100vw;
-  height: auto;
 }
 
 .invis {
   display: none;
 }
-
+main {
+  display: inline-grid;
+  grid-template-areas: "A B";
+  grid-template-columns: 100vw 100vw;
+  grid-template-rows: 100vh;
+}
 .city {
-  display: inline-flex;
-  flex-flow: row wrap;
+  grid-area: "A";
+  display: inline-grid;
+  flex-flow: column wrap;
   justify-content: center;
 align-items: stretch;
 align-content: stretch;
+}
+
+.app {
+  grid-area: "B";
+}
+
+.top {
+  max-width: 100vw;
+  max-height: 100vh;
 }

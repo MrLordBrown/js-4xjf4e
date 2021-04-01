@@ -3,6 +3,7 @@ import './style.css';
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
+const cityer = document.getElementById('city');
 
 var mine =[
   {
@@ -365,14 +366,16 @@ function city() {
     var srcs = document.createAttribute('src');
     var idez = document.createAttribute('id');
     var classer  = document.createAttribute('class');
+    var brak = document.createElement('br');
     container.setAttributeNode(idez);
-    container.setAttributeNode(classer);
+    imgs.setAttributeNode(classer);
     srcs.value = mine[i].Top;
     idez.value = "top"+i;
     classer.value = "top";
     imgs.setAttributeNode(srcs);
     container.appendChild(imgs);
-    appDiv.appendChild(container);
+    cityer.appendChild(container);
+    container.appendChild(brak);
     console.log(mine[i].Week);
     }
 }
@@ -384,8 +387,7 @@ function update() {
     var container = document.createElement('div');
     var names = document.createElement('h1');
     var weeks = document.createElement('h2');
-    var imgs = document.createElement('img');
-    var srcs = document.createAttribute('src');
+    
     var idez = document.createAttribute('id');
     var classer  = document.createAttribute('class');
     var sty = document.createAttribute('style');
@@ -394,13 +396,9 @@ function update() {
     container.setAttributeNode(classer);
     names.textContent = mine[i].Building;
     weeks.textContent = "Week: "+mine[i].week;
-    classer.textContent = "invis";
-    srcs.value = mine[i].Image;
     idez.value = "week"+i;
-    imgs.setAttributeNode(srcs);
     container.appendChild(names);
     container.appendChild(weeks);
-    container.appendChild(imgs);
     appDiv.appendChild(container);
     console.log(mine[i].Week);
     }
